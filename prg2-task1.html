@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Number</title>
+</head>
+<body>
+  <h2>Random Number Generator</h2>
+  <button onclick="showRandom()">Generate</button>
+  <p id="result"></p>
+
+  <script>
+    function showRandom() {
+      var num = Math.floor(Math.random() * 100) + 1;
+      document.getElementById("result").innerText = "Random Number: " + num;
+    }
+  </script>
+</body>
+</html>

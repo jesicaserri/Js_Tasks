@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guessing Game</title>
+</head>
+<body>
+  <h2>Number Guessing Game</h2>
+  <button onclick="startGame()">Start Game</button>
+  <p id="result"></p>
+
+  <script>
+    function startGame() {
+      var secret = 75; 
+      var guess;
+      do {
+        guess = parseInt(prompt("Enter a number:"));
+        if (guess < secret) 
+          document.getElementById("result").innerText = "Too Low, try again!";
+        else if (guess > secret) 
+          document.getElementById("result").innerText = "Too High, try again!";
+      } while (guess !== secret);
+      document.getElementById("result").innerText = "Correct!";
+    }
+  </script>
+</body>
+</html>
