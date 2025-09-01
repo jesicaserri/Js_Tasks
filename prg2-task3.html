@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guess the Number</title>
+</head>
+<body>
+  <h2>Guess the Number (1–100)</h2>
+  <button onclick="startGame()">Start Game</button>
+
+  <script>
+    function startGame() {
+      // generate random number
+      let secret = Math.floor(Math.random() * 100) + 1;
+      let guess;
+
+      // keep looping until correct
+      while (guess !== secret) {
+        guess = parseInt(prompt("Enter your guess (1–100):"));
+
+        if (guess < secret) {
+          alert("Too Low!");
+        } 
+        else if (guess > secret) {
+          alert("Too High!");
+        } 
+        else {
+          alert("Correct! 🎉 The number was " + secret);
+        }
+      }
+    }
+  </script>
+</body>
+</html>
+
+
