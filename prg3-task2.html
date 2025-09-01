@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Remove Duplicates</title>
+</head>
+<body>
+  <script>
+    function removeDuplicates(arr) {
+      return [...new Set(arr)];
+    }
+
+    let input = [1, 2, 2, 3, 4, 4, 5];
+    let output = removeDuplicates(input);
+
+    console.log(output); 
+  </script>
+</body>
+</html>
