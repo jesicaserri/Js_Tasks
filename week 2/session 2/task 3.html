@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week 2 - Session 2 | Task 3: Array Iteration and Loops</title>
+</head>
+<body>
+  <script>
+
+    console.log("=== Array Iteration using forEach ===");
+
+    let numbers = [1, 2, 3, 4, 5];
+    numbers.forEach((num, index) => {
+      console.log(`Index ${index}: Value ${num}`);
+    });
+
+    console.log("\n=== Transform array using map ===");
+
+    let squaredNumbers = numbers.map(num => num * num);
+    console.log("Original numbers:", numbers);
+    console.log("Squared numbers:", squaredNumbers);
+
+    console.log("\n=== Loop over indexes using for-in ===");
+
+    for (let index in numbers) {
+      console.log(`Index ${index}: Value ${numbers[index]}`);
+    }
+
+    console.log("\n=== Loop over values using for-of ===");
+
+    for (let value of numbers) {
+      console.log("Value:", value);
+    }
+
+    console.log("\n=== Observations ===");
+    console.log("- forEach: executes a callback for each element, no return");
+    console.log("- map: transforms array, returns a new array");
+    console.log("- for-in: iterates over array indexes (keys)");
+    console.log("- for-of: iterates over array values");
+
+    console.log("\n=== Task Complete ===");
+  </script>
+</body>
+</html>
