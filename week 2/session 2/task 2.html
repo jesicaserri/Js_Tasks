@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week 2 - Session 2 | Task 2: Array Creation and Basic Operations</title>
+</head>
+<body>
+  <script>
+
+    console.log("=== Array Creation ===");
+
+    let numbers = [10, 20, 30, 40, 50];
+    console.log("Numbers array:", numbers);
+
+    let fruits = ["Apple", "Banana", "Cherry"];
+    console.log("Fruits array:", fruits);
+
+    console.log("\n=== Access and Modify Elements ===");
+
+    console.log("First number:", numbers[0]);
+    console.log("Second fruit:", fruits[1]);
+
+    numbers[2] = 35;
+    fruits[0] = "Apricot";
+    console.log("Modified numbers array:", numbers);
+    console.log("Modified fruits array:", fruits);
+
+    console.log("\n=== Array Length ===");
+    console.log("Numbers array length:", numbers.length);
+    console.log("Fruits array length:", fruits.length);
+
+    console.log("\n=== Adding Elements ===");
+
+    numbers.push(60);
+    fruits.push("Date");
+    console.log("After push:", numbers, fruits);
+
+    numbers.unshift(5);
+    fruits.unshift("Avocado");
+    console.log("After unshift:", numbers, fruits);
+
+    console.log("\n=== Removing Elements ===");
+
+    let removedNumber = numbers.pop();
+    let removedFruit = fruits.pop();
+    console.log("Removed last elements:", removedNumber, removedFruit);
+    console.log("Arrays now:", numbers, fruits);
+
+    removedNumber = numbers.shift();
+    removedFruit = fruits.shift();
+    console.log("Removed first elements:", removedNumber, removedFruit);
+    console.log("Arrays now:", numbers, fruits);
+
+    console.log("\n=== Task Complete ===");
+  </script>
+</body>
+</html>
