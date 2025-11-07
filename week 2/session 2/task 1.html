@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week 2 - Session 2 | Task 1: Math & String Built-in Functions</title>
+</head>
+<body>
+  <script>
+
+    console.log("=== Math Functions ===");
+
+    let randomNum = Math.random();
+    console.log("Random number (0-1):", randomNum);
+
+    let randomNum100 = Math.floor(Math.random() * 100) + 1;
+    console.log("Random number (1-100):", randomNum100);
+
+    let num = 4.7;
+    console.log("Original number:", num);
+    console.log("Math.round():", Math.round(num)); // Nearest integer
+    console.log("Math.floor():", Math.floor(num)); // Round down
+    console.log("Math.ceil():", Math.ceil(num));   // Round up
+
+    let numbers = [12, 5, 8, 130, 44];
+    console.log("Numbers array:", numbers);
+    console.log("Math.min(...numbers):", Math.min(...numbers));
+    console.log("Math.max(...numbers):", Math.max(...numbers));
+
+    console.log("\n=== String Functions ===");
+
+    let text = "JavaScript is Fun!";
+    console.log("Original text:", text);
+
+    console.log("toUpperCase():", text.toUpperCase());
+    console.log("toLowerCase():", text.toLowerCase());
+
+    console.log("substring(0, 10):", text.substring(0, 10));
+    console.log("slice(0, 10):", text.slice(0, 10));
+
+    console.log("Includes 'Fun':", text.includes("Fun"));
+    console.log("Includes 'fun':", text.includes("fun")); // Case-sensitive
+
+    let newText = text.replace("Fun", "Awesome");
+    console.log("After replace():", newText);
+
+    console.log("\n=== Task Complete ===");
+  </script>
+</body>
+</html>
