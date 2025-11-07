@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week 3 - Session 2 | Task 3: Function Context & Advanced Calls</title>
+</head>
+<body>
+  <script>
+    console.log("=== Task 3: Function Context & Advanced Calls ===");
+
+    function introduce(greeting, punctuation) {
+      console.log(`${greeting}, my name is ${this.name}${punctuation}`);
+    }
+
+    const person1 = { name: "Alice" };
+    const person2 = { name: "Bob" };
+
+    console.log("\n--- Using call() ---");
+    introduce.call(person1, "Hello", "!");
+    introduce.call(person2, "Hi", ".");
+
+    console.log("\n--- Using apply() ---");
+    introduce.apply(person1, ["Good morning", "!!"]);
+    introduce.apply(person2, ["Hey", "!!"]);
+
+    console.log("\n--- Using bind() ---");
+    const introduceAlice = introduce.bind(person1, "Greetings", "...");
+    introduceAlice(); // Call later with bound context
+
+    const introduceBob = introduce.bind(person2);
+    introduceBob("Hi there", "!!");
+
+    console.log("\n=== Comparing call(), apply(), bind() ===");
+    console.log("call(): Invokes immediately with individual arguments.");
+    console.log("apply(): Invokes immediately with arguments as an array.");
+    console.log("bind(): Returns a new function with bound context, can be called later.");
+
+    console.log("\n=== Task 3 Complete ===");
+
+  </script>
+</body>
+</html>
