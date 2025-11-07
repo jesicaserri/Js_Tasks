@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week 1 - Session 1 | Task 3: Operators in JavaScript</title>
+</head>
+<body>
+  <script>
+    // Week 1 - Session 1
+    // Task 3: Operators in JavaScript
+
+    console.log("=== Arithmetic Operators ===");
+
+    let a = 10;
+    let b = 3;
+
+    console.log("a + b =", a + b); // Addition
+    console.log("a - b =", a - b); // Subtraction
+    console.log("a * b =", a * b); // Multiplication
+    console.log("a / b =", a / b); // Division
+    console.log("a % b =", a % b); // Modulus (remainder)
+
+    console.log("\n=== Assignment Operators ===");
+
+    let x = 5;
+    console.log("x =", x);
+
+    x += 3; // x = x + 3
+    console.log("x += 3 →", x);
+
+    x -= 2; // x = x - 2
+    console.log("x -= 2 →", x);
+
+    console.log("\n=== Relational (Comparison) Operators ===");
+
+    let p = 10;
+    let q = "10";
+
+    console.log("p == q:", p == q);   // true (value only)
+    console.log("p === q:", p === q); // false (value + type)
+    console.log("p != q:", p != q);   // false
+    console.log("p !== q:", p !== q); // true
+    console.log("p > 5:", p > 5);
+    console.log("p < 5:", p < 5);
+    console.log("p >= 10:", p >= 10);
+    console.log("p <= 10:", p <= 10);
+
+    console.log("\n=== Logical Operators ===");
+
+    let isAdult = true;
+    let hasID = false;
+
+    console.log("isAdult && hasID:", isAdult && hasID); // AND
+    console.log("isAdult || hasID:", isAdult || hasID); // OR
+    console.log("!isAdult:", !isAdult);                 // NOT
+
+    console.log("\n=== Conditional (Ternary) Operator ===");
+
+    let age = 18;
+    let result = (age >= 18) ? "You are an adult." : "You are a minor.";
+    console.log("Age:", age, "→", result);
+
+    console.log("\n=== Bitwise Operators ===");
+
+    let m = 5;  // binary: 0101
+    let n = 3;  // binary: 0011
+
+    console.log("m & n:", m & n); // AND → 0001 → 1
+    console.log("m | n:", m | n); // OR  → 0111 → 7
+    console.log("m ^ n:", m ^ n); // XOR → 0110 → 6
+    console.log("~m:", ~m);       // NOT → flips bits (-6)
+    console.log("m << 1:", m << 1); // Left shift (0101 → 1010) = 10
+    console.log("m >> 1:", m >> 1); // Right shift (0101 → 0010) = 2
+
+    console.log("\n=== Increment & Decrement Operators ===");
+
+    let counter = 10;
+    console.log("Original counter:", counter);
+
+    counter++;
+    console.log("After counter++:", counter);
+
+    counter--;
+    console.log("After counter--:", counter);
+
+    let preIncrement = ++counter;
+    console.log("Pre-increment (++counter):", preIncrement);
+
+    let postDecrement = counter--;
+    console.log("Post-decrement (counter--):", postDecrement);
+    console.log("Final counter value:", counter);
+
+    console.log("\n=== Task Complete ===");
+  </script>
+</body>
+</html>
