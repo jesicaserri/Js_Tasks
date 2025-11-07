@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week 3 - Session 1 | Task 3: Object Destructuring & Spread</title>
+</head>
+<body>
+  <script>
+    console.log("=== Task 3: Object Destructuring and Spread ===");
+
+    const student = {
+      name: "Bob",
+      age: 22,
+      course: "Mathematics"
+    };
+
+    const { name, age, course } = student;
+    console.log("\n--- Basic Destructuring ---");
+    console.log("Name:", name);
+    console.log("Age:", age);
+    console.log("Course:", course);
+
+    const student2 = {
+      name: "Carol",
+      age: 19
+      // course property missing
+    };
+
+    const { name: studentName, course: studentCourse = "Unknown" } = student2;
+    console.log("\n--- Destructuring with Default Values ---");
+    console.log("Name:", studentName);
+    console.log("Course:", studentCourse);
+
+    const employee = {
+      id: 101,
+      personalInfo: {
+        firstName: "David",
+        lastName: "Smith",
+        contact: {
+          email: "david@example.com",
+          phone: "123-456-7890"
+        }
+      }
+    };
+
+    const { personalInfo: { firstName, contact: { email } } } = employee;
+    console.log("\n--- Nested Destructuring ---");
+    console.log("First Name:", firstName);
+    console.log("Email:", email);
+
+    const originalObj = { a: 1, b: 2 };
+    const clonedObj = { ...originalObj };
+    console.log("\n--- Cloning Object ---");
+    console.log("Original Object:", originalObj);
+    console.log("Cloned Object:", clonedObj);
+
+    const obj1 = { x: 10, y: 20 };
+    const obj2 = { y: 50, z: 30 }; // note: y will be overwritten
+    const mergedObj = { ...obj1, ...obj2 };
+    console.log("\n--- Merging Objects ---");
+    console.log("Object 1:", obj1);
+    console.log("Object 2:", obj2);
+    console.log("Merged Object:", mergedObj);
+
+    console.log("\n=== Task 3 Complete ===");
+
+  </script>
+</body>
+</html>
