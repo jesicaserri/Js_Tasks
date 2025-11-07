@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week 1 - Session 2 | Task 3: Break and Continue Usage</title>
+</head>
+<body>
+  <script>
+
+    console.log("=== Using break: Stop at first prime number ===");
+
+    function isPrime(num) {
+      if (num < 2) return false;
+      for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+      }
+      return true;
+    }
+
+    for (let n = 10; n <= 20; n++) {
+      if (isPrime(n)) {
+        console.log("First prime number found between 10 and 20:", n);
+        break; // Exit loop once first prime is found
+      }
+    }
+
+    console.log("\n=== Using continue: Print only odd numbers 1 to 20 ===");
+
+    for (let i = 1; i <= 20; i++) {
+      if (i % 2 === 0) {
+        continue; // Skip even numbers
+      }
+      console.log(i); // Only odd numbers are printed
+    }
+
+    console.log("\n=== Loop Flow Observations ===");
+    console.log("- break stops the loop entirely when a condition is met.");
+    console.log("- continue skips the current iteration but continues the loop.");
+
+    console.log("\n=== Task Complete ===");
+  </script>
+</body>
+</html>
