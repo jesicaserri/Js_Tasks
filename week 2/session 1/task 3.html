@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week 2 - Session 1 | Task 3: Callback Functions & Scopes</title>
+</head>
+<body>
+  <script>
+  
+    console.log("=== Callback Functions ===");
+
+    function greetUser(name, callback) {
+      console.log(`Hello, ${name}!`);
+      callback();
+    }
+
+    function afterGreeting() {
+      console.log("This runs after the greeting.");
+    }
+
+    greetUser("Alice", afterGreeting);
+
+    greetUser("Bob", function() {
+      console.log("Anonymous callback executed!");
+    });
+
+    greetUser("Charlie", () => console.log("Arrow function callback executed!"));
+
+    console.log("\n=== Scopes: Global, Block, Local ===");
+
+    var globalVar = "I am global (var)";
+    let globalLet = "I am global (let)";
+    const globalConst = "I am global (const)";
+
+    function testScope() {
+      var localVar = "I am local (var)";
+      let localLet = "I am local (let)";
+      const localConst = "I am local (const)";
+
+      console.log("Inside function:");
+      console.log(localVar);   // Accessible
+      console.log(localLet);   // Accessible
+      console.log(localConst); // Accessible
+
+      if (true) {
+        var blockVar = "I am block scoped? (var)";
+        let blockLet = "I am block scoped (let)";
+        const blockConst = "I am block scoped (const)";
+        console.log("Inside block:");
+        console.log(blockVar);   // Accessible
+        console.log(blockLet);   // Accessible
+        console.log(blockConst); // Accessible
+      }
+
+      console.log("Outside block but inside function:");
+      console.log(blockVar); // var is function-scoped → accessible
+     
+    }
+
+    testScope();
+
+    console.log("Outside function:");
+    console.log(globalVar);
+    console.log(globalLet);
+    console.log(globalConst);
+
+
+    console.log("\n=== Observations ===");
+    console.log("- var: function-scoped, can be accessed outside block but inside function");
+    console.log("- let & const: block-scoped, not accessible outside block");
+    console.log("- Global variables can be accessed anywhere");
+    console.log("- Callback functions allow passing behavior as arguments");
+
+    console.log("\n=== Task Complete ===");
+  </script>
+</body>
+</html>
