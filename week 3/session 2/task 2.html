@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week 3 - Session 2 | Task 2: Complex Data & Parameter Handling</title>
+</head>
+<body>
+  <script>
+    console.log("=== Task 2: Complex Data & Parameter Handling ===");
+
+    const users = [
+      { id: 1, name: "Alice", email: "alice@example.com", address: { city: "New York", country: "USA" } },
+      { id: 2, name: "Bob", email: "bob@example.com", address: { city: "Los Angeles", country: "USA" } },
+      { id: 3, name: "Carol", email: "carol@example.com", address: { city: "London", country: "UK" } }
+    ];
+
+    console.log("\n--- Users Array ---");
+    console.log(users);
+
+    console.log("\n--- Access Nested Data ---");
+    users.forEach(user => {
+      console.log(`${user.name} lives in ${user.address.city}, ${user.address.country}`);
+    });
+
+    function sumAll(...numbers) {
+      return numbers.reduce((acc, curr) => acc + curr, 0);
+    }
+
+    console.log("\n--- Rest Parameters Function ---");
+    console.log("Sum of 1,2,3,4:", sumAll(1,2,3,4));
+    console.log("Sum of 10,20:", sumAll(10,20));
+
+    const arr1 = [1,2,3];
+    const arr2 = [4,5,6];
+    const combinedArr = [...arr1, ...arr2];
+    console.log("\n--- Combining Arrays with Spread ---");
+    console.log("Array 1:", arr1);
+    console.log("Array 2:", arr2);
+    console.log("Combined Array:", combinedArr);
+
+    const originalObj = { a: 1, b: 2 };
+    const clonedObj = { ...originalObj };
+    console.log("\n--- Cloning Object ---");
+    console.log("Original:", originalObj);
+    console.log("Cloned:", clonedObj);
+
+    function greetUser({ name, email }) {
+      console.log(`Hello ${name}! Your email is ${email}`);
+    }
+
+    console.log("\n--- Function with Parameter Destructuring ---");
+    greetUser(users[0]);
+    greetUser(users[2]);
+
+    console.log("\n=== Task 2 Complete ===");
+  </script>
+</body>
+</html>
