@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week 3 - Session 1 | Task 2: Objects and Methods</title>
+</head>
+<body>
+  <script>
+    console.log("=== Task 2: Working with Objects and Methods ===");
+
+    const student = {
+      name: "Alice",
+      age: 20,
+      course: "Computer Science",
+      displayInfo: function() {
+        console.log(`Student Name: ${this.name}`);
+        console.log(`Age: ${this.age}`);
+        console.log(`Course: ${this.course}`);
+      }
+    };
+
+    console.log("\n--- Student Object ---");
+    console.log(student);
+
+    console.log("\n--- Display Student Info ---");
+    student.displayInfo(); // Call the method
+
+    student.age = 21;
+    student.course = "Software Engineering";
+    console.log("\n--- Modified Student Info ---");
+    student.displayInfo();
+
+    student.yearsUntilGraduation = function(currentYear, graduationYear) {
+      return graduationYear - currentYear;
+    };
+
+    console.log("\n--- Years Until Graduation ---");
+    const yearsLeft = student.yearsUntilGraduation(2025, 2028);
+    console.log(`Years until graduation: ${yearsLeft}`);
+
+    const car = {
+      brand: "Toyota",
+      model: "Corolla",
+      year: 2020,
+      startEngine: function() {
+        console.log(`${this.brand} ${this.model} engine started!`);
+      },
+      updateYear: function(newYear) {
+        this.year = newYear;
+        console.log(`Car year updated to ${this.year}`);
+      }
+    };
+
+    console.log("\n--- Car Object ---");
+    console.log(car);
+
+    console.log("\n--- Car Methods ---");
+    car.startEngine();
+    car.updateYear(2023);
+    console.log("\n=== Task 2 Complete ===");
+
+  </script>
+</body>
+</html>
