@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week 3 - Session 2 | Task 1: Destructuring, Notation & Iteration</title>
+</head>
+<body>
+  <script>
+    console.log("=== Task 1: Destructuring, Notation & Iteration ===");
+
+    const numbers = [10, 20, 30, 40];
+    const [first, second, ...rest] = numbers;
+    console.log("\n--- Array Destructuring ---");
+    console.log("First:", first);
+    console.log("Second:", second);
+    console.log("Rest of numbers:", rest);
+
+    const student = {
+      name: "Emma",
+      age: 21,
+      course: "Physics",
+      address: {
+        city: "New York",
+        country: "USA"
+      }
+    };
+
+    const { name, age, address: { city } } = student;
+    console.log("\n--- Object Destructuring ---");
+    console.log("Name:", name);
+    console.log("Age:", age);
+    console.log("City:", city);
+
+    console.log("\n--- Accessing Object Properties ---");
+    console.log("Dot notation - Course:", student.course);
+    console.log("Bracket notation - Country:", student["address"]["country"]);
+
+    console.log("\n--- Iterating Through Object ---");
+    // Using for...in loop
+    console.log("Using for...in:");
+    for (let key in student) {
+      if (student.hasOwnProperty(key)) {
+        console.log(key + ":", student[key]);
+      }
+    }
+
+    console.log("\nUsing Object.keys() and forEach:");
+    Object.keys(student).forEach(key => {
+      console.log(key + ":", student[key]);
+    });
+
+    console.log("\nUsing Object.entries():");
+    Object.entries(student).forEach(([key, value]) => {
+      console.log(key + ":", value);
+    });
+
+    console.log("\n=== Task 1 Complete ===");
+  </script>
+</body>
+</html>
