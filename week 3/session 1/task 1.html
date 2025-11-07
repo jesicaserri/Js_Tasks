@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week 3 - Session 1 | Task 1: Advanced Array Methods</title>
+</head>
+<body>
+  <script>
+    console.log("=== Filter Method ===");
+    const numbers = [5, 12, 8, 130, 44];
+    const numbersGreaterThan10 = numbers.filter(num => num > 10);
+    console.log("Original numbers:", numbers);
+    console.log("Numbers > 10:", numbersGreaterThan10);
+
+    console.log("\n=== Reduce Method ===");
+    const nums = [1, 2, 3, 4];
+    const sum = nums.reduce((acc, curr) => acc + curr, 0);
+    const product = nums.reduce((acc, curr) => acc * curr, 1);
+    const words = ["Hello", "World"];
+    const sentence = words.reduce((acc, curr) => acc + " " + curr);
+    console.log("Array for reduce:", nums);
+    console.log("Sum:", sum);
+    console.log("Product:", product);
+    console.log("Concatenated string:", sentence);
+
+    console.log("\n=== Slice Method ===");
+    const fruits = ["apple", "banana", "cherry", "date", "elderberry"];
+    const someFruits = fruits.slice(1, 4);
+    console.log("Original fruits:", fruits);
+    console.log("Sliced fruits (index 1-3):", someFruits);
+
+    console.log("\n=== Splice Method ===");
+    const colors = ["red", "green", "blue", "yellow"];
+    const removed = colors.splice(2, 1); // Remove 1 element at index 2
+    colors.splice(2, 0, "purple", "orange"); // Add elements at index 2
+    console.log("Removed colors:", removed);
+    console.log("Updated colors:", colors);
+
+    console.log("\n=== Spread Operator ===");
+    const arr1 = [1, 2, 3];
+    const arr2 = [4, 5, 6];
+    const arrClone = [...arr1];
+    const mergedArr = [...arr1, ...arr2];
+    console.log("Original array 1:", arr1);
+    console.log("Cloned array:", arrClone);
+    console.log("Merged array:", mergedArr);
+
+    console.log("\n=== Task Complete ===");
+  </script>
+</body>
+</html>
