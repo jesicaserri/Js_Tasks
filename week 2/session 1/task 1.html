@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week 2 - Session 1 | Task 1: Defining and Calling Functions</title>
+</head>
+<body>
+  <script>
+
+    console.log("=== Simple Functions with Fixed Parameters ===");
+
+    function add(a, b) {
+      return a + b;
+    }
+
+    let sum = add(5, 10);
+    console.log("add(5, 10) =", sum);
+
+    function greet(name) {
+      return `Hello, ${name}!`;
+    }
+
+    console.log(greet("Alice"));
+    console.log(greet("Bob"));
+
+    console.log("\n=== Functions Accepting Arbitrary Number of Arguments ===");
+
+    function sumAll(...numbers) {
+      let total = 0;
+      for (let num of numbers) {
+        total += num;
+      }
+      return total;
+    }
+
+    console.log("sumAll(1, 2, 3, 4, 5) =", sumAll(1, 2, 3, 4, 5));
+    console.log("sumAll(10, 20) =", sumAll(10, 20));
+
+    function multiplyAll() {
+      let product = 1;
+      for (let i = 0; i < arguments.length; i++) {
+        product *= arguments[i];
+      }
+      return product;
+    }
+
+    console.log("multiplyAll(2, 3, 4) =", multiplyAll(2, 3, 4));
+    console.log("multiplyAll(5, 5) =", multiplyAll(5, 5));
+
+    console.log("\n=== Task Complete ===");
+  </script>
+</body>
+</html>
